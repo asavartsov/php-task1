@@ -4,19 +4,20 @@ declare(strict_types = 1);
 
 namespace Tests\unit;
 
+use DateTime;
 use PHPUnit\Framework\TestCase;
-use Statistics\Calculator\AveragePostsPerUser;
+
+use Statistics\Calculator\AveragePostNumberPerUser;
 use Statistics\Dto\ParamsTo;
 use Statistics\Enum\StatsEnum;
 use SocialPost\Dto\SocialPostTo;
-use DateTime;
 
 /**
- * Class AveragePostsPerUserTest
+ * Class AveragePostNumberPerUserTest
  *
  * @package Tests\unit
  */
-class AveragePostsPerUserTest extends TestCase
+class AveragePostNumberPerUserTest extends TestCase
 {
     private ParamsTo $paramsTo; 
 
@@ -34,7 +35,7 @@ class AveragePostsPerUserTest extends TestCase
      */
     public function testCalculatesAverage($expected, $posts): void
     {
-        $calculator = new AveragePostsPerUser();
+        $calculator = new AveragePostNumberPerUser();
         $calculator->setParameters($this->paramsTo);
 
         foreach ($posts as $post) {

@@ -6,11 +6,11 @@ use SocialPost\Dto\SocialPostTo;
 use Statistics\Dto\StatisticsTo;
 
 /**
- * Class TotalPosts
+ * Class AveragePostNumberPerUser
  *
  * @package Statistics\Calculator
  */
-class AveragePostsPerUser extends AbstractCalculator
+class AveragePostNumberPerUser extends AbstractCalculator
 {
 
     protected const UNITS = 'posts';
